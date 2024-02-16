@@ -10,19 +10,15 @@
     ++ [ (import ./wofi) ]
     ++ [ (import ./zsh) ]
     ++ [ (import ./mako) ]
-    ++ [ (import ./neofetch) ]
     ++ [ (import ./starship) ]
     ++ [ (import ./wlogout) ]
-    ++ [ (import ./packagep) ]
+    ++ [ (import ./packages) ]
     ++ [ (import ./tmux)]
-    ++ [ (import ./gaming)]
     ++ [ (import ./gtk)]
     ++ [ (import ./scripts)]
     ++ [ (import ./lazyvim)]
     ;
     config.modules = {
-   #     sops-nix.enable = true;
-   #     nixvim.enable = true;
         lazyvim.enable = true;
         tmux.enable = true;
         waybar.enable = true;
@@ -38,7 +34,6 @@
         wofi.enable = true;
         zsh.enable = true;
         mako.enable = true;
-        neofetch.enable = true;
         starship.enable= true;
         wlogout.enable = true;
         packages.enable = true;

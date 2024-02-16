@@ -7,10 +7,10 @@
   
   with lib;
     let
-      cfg = config.modules.packagep;
+      cfg = config.modules.packages;
     in {
       
-    options.modules.packagep = { enable = mkEnableOption "packagep"; };
+    options.modules.packages = { enable = mkEnableOption "packages"; };
     config = mkIf cfg.enable {
         home.packages = with pkgs; [
       # programming
