@@ -1,7 +1,7 @@
 {...}: {
   services = {
     gvfs.enable = true;
-    gnome.gnome-keyring.enable = true;
+    zell.enableGnomeKeyring = true;
     dbus.enable = true;
     openssh = {
       enable = true;

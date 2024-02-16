@@ -2,7 +2,7 @@
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.initrd.kernelModules = [ "kvm-intel" ];
+#  boot.initrd.kernelModules = [ "intel" ];
   networking = {
     hostName = "P72";
     networkmanager.enable = true;
@@ -38,6 +38,6 @@ home-manager.users.zell.wayland.windowManager.hyprland.settings.monitor = [
     powerManagement.enable = false;
     open = false;
     nvidiaSettings = true;
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
+  #  package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 }
