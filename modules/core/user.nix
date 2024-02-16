@@ -19,6 +19,7 @@
       home.stateVersion = "23.11";
       programs.home-manager.enable = true;
     };
+  };
  users.users = {
     "zell" = {
     isNormalUser = true;
@@ -27,6 +28,6 @@
     shell = pkgs.zsh;
     };
  };
- nix.settings.allowed-users = [ "zell" "felicia"];
-  }; 
-}
+ nix.settings.allowed-users = [ "zell" ];
+  } 
+
