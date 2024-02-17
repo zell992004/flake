@@ -1,4 +1,4 @@
-{inputs, nixpkgs, self, nixos-hardware, modulesPath, lib, pkgs, user, ...}:
+{inputs, nixpkgs, self, nixos-hardware, lib, pkgs, user, modulesPath, ...}:
 let system = "x86_64-linux";
 pkgs = import nixpkgs {
   inherit system;
@@ -24,11 +24,12 @@ P72 = nixpkgs.lib.nixosSystem {
     ;
   };
 
-wsl = nixpkgs.lib.nixosSystem {
-    specialArgs = { inherit self inputs; };
-    modules = 
-         [(modulesPath + "profiles/minimal.nix")]
-      ++ [self.inputs.nixos-wsl.nixosModules.wsl]
-      ;
-  };
+#wsl = nixpkgs.lib.nixosSystem {
+#    specialArgs = { inherit self inputs; };
+#    modules = 
+#         [ (modulesPath + "/profiles/minimal.nix") ] 
+#      ++ [self.inputs.nixos-wsl.nixosModules.wsl]
+#      ++ [ (import ./../../hosts/wsl/default.nix)]
+#      ;
+#  };
 }
