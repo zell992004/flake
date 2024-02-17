@@ -15,11 +15,6 @@ in {
     enableCompletion = true;
     enableAutosuggestions = true;
     syntaxHighlighting.enable = true;
-  #  prezto = {
-  #      enable = true;
-  #      tmux.autoStartLocal = true;
-  #      tmux.autoStartRemote = true;
-  #    };
     initExtra = ''
     ZSH_TMUX_AUTOSTART=true
     '';
