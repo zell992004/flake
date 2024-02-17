@@ -1,4 +1,19 @@
- boot.loader.systemd-boot.enable = true;
+{pkgs, inputs, config, ...}: {
+     modules =
+         [ (import ./../../modules/core/hardware.nix) ]
+      ++ [ (import ./../../modules/core/pipewire.nix) ]
+      ++ [ (import ./../../modules/core/program.nix) ]
+      ++ [ (import ./../../modules/core/security.nix) ]
+      ++ [ (import ./../../modules/core/services.nix) ]
+      ++ [ (import ./../../modules/core/system.nix) ]
+      ++ [ (import ./../../modules/core/user.nix) ]
+      ++ [ (import ./../../modules/core/wayland.nix) ]
+      ++ [ (import ./hardware-configuration.nix) ]
+      ++ [ (import ./default.nix) ]
+      ++ [ (import ../homemanager.nix)]
+    ;
+ 
+boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 #  boot.initrd.kernelModules = [ "intel" ];
   networking = {
