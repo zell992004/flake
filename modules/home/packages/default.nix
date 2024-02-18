@@ -41,6 +41,7 @@
       libcxxStdenv
       obsidian
 # security
+    x11_ssh_askpass
     #  sops
 #lazyvim
       fd

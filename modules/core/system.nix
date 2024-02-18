@@ -27,6 +27,7 @@ in{
     wget
     git
     barrier
+    x11_ssh_askpass
 ];
 
   time.timeZone = "America/New_York";
