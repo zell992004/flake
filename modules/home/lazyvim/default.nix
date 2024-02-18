@@ -21,11 +21,12 @@ in {
       stylua
       # Telescope
       ripgrep
+      obsidian
     ];
 
     plugins = with pkgs.vimPlugins; [
       lazy-nvim
-    ];
+      ];
 
     extraLuaConfig =
       let

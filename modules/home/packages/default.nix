@@ -39,11 +39,15 @@
       discord
       eza
       libcxxStdenv
-      sops
+      obsidian
+# security
+    #  sops
+#lazyvim
       fd
       gcc
       tree-sitter
       nodejs
-     ];
+      
+];
     };
 }

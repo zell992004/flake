@@ -1,7 +1,7 @@
 {pkgs, lib, config, ...}:
 {
     nixpkgs = { 
-      config = {permittedInsecurePackages = pkgs.liv.optional (pkgs.obsidiain.version == "1.5.3") "electron-25.9.0";
+      config = {permittedInsecurePackages = pkgs.lib.optional (pkgs.obsidian.version == "1.5.3") "electron-25.9.0";
       };
     };
 

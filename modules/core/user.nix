@@ -26,6 +26,9 @@
     description = "Pete";
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.zsh;
+    openssh.authorizedKeys.keys = [
+    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIA9SSRrQ2/MdG1zyVLJEwHmdNYzbciXyWU4dPhyhm91o zell992004@gmail.com"
+    ];
     };
  };
  nix.settings.allowed-users = [ "zell" ];

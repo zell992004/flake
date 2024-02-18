@@ -30,6 +30,7 @@ in
     GBM_BACKEND = "nvidia-drm";
   #  __GLX_VENDOR_LIBRARY_NAME = "nvidia";
    # LIBVA_DRIVER_NAME = "nvidia";
-  };
+    SSH_AUTH_SOCK = "~/.ssh/id_ed25519.pub";
+ };
   };
 }
