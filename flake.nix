@@ -13,10 +13,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
    # sops-nix.url = "github:Mic92/sops-nix";
+    NixOS-WSL = {
+        url = "github:nix-community/NixOS-WSL";
+        inputs.nixpkgs.follows = "nixpkgs";
+      };
     };
   
 
-  outputs = { self, nixpkgs, nixos-hardware, ... } @ inputs: {
+  outputs = { self, nixpkgs, nixos-hardware, NixOS-WSL, ... } @ inputs: {
 
     nixosConfigurations = import ./modules/core/default.nix {
       inherit self nixpkgs inputs nixos-hardware ;

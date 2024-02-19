@@ -3,11 +3,11 @@
 with lib;
 let
   defaultUser = nixos;
+  system = "x86_64-linux";
 in
 {
   imports = [
-    "${modulesPath}/profiles/minimal.nix"
-    self.inputs.nixos-wsl.nixosModules.wsl
+    self.inputs.NixOS-WSL.nixosModules.wsl
   ];
 
   wsl = {

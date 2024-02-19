@@ -20,9 +20,8 @@ P72 = nixpkgs.lib.nixosSystem {
 #wsl = nixpkgs.lib.nixosSystem {
 #    specialArgs = { inherit self inputs; };
 #    modules = 
-#         [ (modulesPath + "/profiles/minimal.nix") ] 
-#      ++ [self.inputs.nixos-wsl.nixosModules.wsl]
-#      ++ [ (import ./../../hosts/wsl/default.nix)]
+#         [inputs.NixOS-WSL.nixosModules.wsl]
+#      ++ [ (import ../../hosts/wsl/default.nix)]
 #      ;
 #  };
 }

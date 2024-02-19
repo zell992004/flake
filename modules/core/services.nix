@@ -10,5 +10,6 @@
         AllowUsers = ["zell"];
       };
     };
+    self-deploy.sshKeyFile = "~/.ssh/id_ed25519";
   };
 }
