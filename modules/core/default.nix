@@ -17,11 +17,12 @@ P72 = nixpkgs.lib.nixosSystem {
     ;
   };
 
-#wsl = nixpkgs.lib.nixosSystem {
-#    specialArgs = { inherit self inputs; };
-#    modules = 
-#         [inputs.NixOS-WSL.nixosModules.wsl]
-#      ++ [ (import ../../hosts/wsl/default.nix)]
-#      ;
-#  };
+wsl = nixpkgs.lib.nixosSystem {
+    specialArgs = { inherit self inputs; };
+    modules = 
+         [inputs.NixOS-WSL.nixosModules.wsl]
+      ++ [ (import ../../hosts/wsl/default.nix)]
+      ;
+  };
+  
 }
