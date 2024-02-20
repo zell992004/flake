@@ -12,7 +12,6 @@
        ./../../modules/core/wayland.nix
        ./../../modules/core/obsidian.nix
        ./hardware-configuration.nix
-       ./homemanager.nix
     ];
 }
 
