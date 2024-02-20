@@ -23,5 +23,4 @@ boot.loader.systemd-boot.enable = true;
       };
     };
   };
-  powerManagemnt.cpuFreqGovenor = "performance";
 }
