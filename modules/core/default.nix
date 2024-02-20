@@ -17,6 +17,14 @@ P72 = nixpkgs.lib.nixosSystem {
     ;
   };
 
+T480 = nixpkgs.lib.nixosSystem {
+    specialArgs = { inherit self inputs};
+    modules = 
+    [ (../../hosts/T480/default.nix)]
+    ++ [(nixos-hardware.nixosModules.lenovo-thinkpad-t480)]
+  ;
+  };
+
 #wsl = nixpkgs.lib.nixosSystem {
 #    specialArgs = { inherit self inputs; };
 #    modules = 
