@@ -1,6 +1,5 @@
 { pkgs, inputs, config, nixpkgs, ... }: {
   imports = [
-      ./hardware-configuration.nix
       ./nix.nix
       ./../../modules/core/hardware.nix
        ./../../modules/core/pipewire.nix
