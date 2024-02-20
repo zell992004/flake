@@ -8,7 +8,7 @@ in
 {
   imports = [
     self.inputs.NixOS-WSL.nixosModules.wsl
-    ./hardware-configuration.nix
+    #./hardware-configuration.nix
   ];
 
   wsl = {

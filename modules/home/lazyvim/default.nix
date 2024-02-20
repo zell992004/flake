@@ -20,12 +20,12 @@ in {
       lua-language-server
       stylua
       # Telescope
-      ripgrep
-      obsidian
+      ripgrep 
     ];
 
     plugins = with pkgs.vimPlugins; [
       lazy-nvim
+      obsidian-nvim
       ];
 
     extraLuaConfig =

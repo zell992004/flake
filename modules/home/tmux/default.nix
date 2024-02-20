@@ -7,7 +7,7 @@ options.modules.tmux = {enable = mkEnableOption "tmux";};
 config = mkIf cfg.enable {
 programs.tmux ={
   enable = true;
-  #shell = "${pkgs.zsh}/run/current-system/sw/bin/sh";
+  shell = "/run/current-system/sw/bin/zsh";
   terminal = "screen-256color";
   escapeTime = 10;
   plugins = (with pkgs; [
