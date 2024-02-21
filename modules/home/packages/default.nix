@@ -47,6 +47,7 @@
       fd
       gcc
       tree-sitter
+      ruby
       nodejs
       
 ];

@@ -71,6 +71,7 @@ in {
           plenary-nvim
           telescope-fzf-native-nvim
           telescope-nvim
+          obsidian-nvim
           todo-comments-nvim
           tokyonight-nvim
           trouble-nvim
