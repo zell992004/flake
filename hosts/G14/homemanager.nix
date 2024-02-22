@@ -6,10 +6,11 @@
      "HDMI-A-1,1920x1080,-1920x-1080, 1"
      "DP-2,1920x1080,-3840x-1080,1"
       ]; 
- #   wayland.windowManager.hyprland.settings.workspace = [
- #   "workspace=1,name:Terminal,monitor:HDMI-A-1"
- #   "workspace=4,name:Notes,monitor:eDP-1"
- #   "workspace=2,name:web.monitor:DP-3"
- #   ];
+    wayland.windowManager.hyprland.settings.workspace = [
+    "workspace=1,name:Terminal,on-created-empty:foot -e tmux,monitor:HDMI-A-1"
+    "workspace=4,name:Notes,on-created-empty:foot,monitor:eDP-1"
+    "workspace=2,name:Web,on-created-empty:firefox,monitor:DP-3"
+    "workspace=3,name:SSH,on-created-empty:foot -e tmux,monitor:DP-2" 
+    ];
     };
 }
