@@ -10,10 +10,10 @@ config = mkIf cfg.enable {
   wayland.windowManager.hyprland = {
     extraConfig = "
       $mainMod = SUPER
-     # monitor = ,highrr,auto,1
-     # monitor = ,highres,auto,1
-
-     
+    workspace=1,name:Terminal,monitor:HDMI-A-1
+    workspace=4,name:Notes,monitor:eDP-1
+    workspace=2,name:Web,monitor:DP-3
+    workspace=3,name:SSH/other:DP-2 
       #TODO Add swipe gesture for workspaces
 
       input {
