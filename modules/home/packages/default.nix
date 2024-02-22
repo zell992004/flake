@@ -14,6 +14,7 @@
     config = mkIf cfg.enable {
         home.packages = with pkgs; [
       # others
+      neofetch
       openssl
       libnotify
       pamixer
