@@ -21,7 +21,7 @@ G14 = nixpkgs.lib.nixosSystem {
     specialArgs = {inherit self inputs;};
     modules =
     [ (../../hosts/G14/default.nix)]
-    ++ [(nixos-hardware.nixosModules.asus-zephyrus-ga401)]
+  #  ++ [(nixos-hardware.nixosModules.asus-zephyrus-ga401)]
    ;
   };
 

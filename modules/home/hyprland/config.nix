@@ -100,7 +100,7 @@ config = mkIf cfg.enable {
 
       # ----------------------------------------------------------------
       # keybindings
-      bind = $mainMod, Return, exec, foot
+      bind = $mainMod, Return, exec, foot -e tmux
       bind = $mainMod SHIFT, Return, exec, foot --fullscreen
       bind = $mainMod, Q, killactive,
       bind = $mainMod, T, killactive,

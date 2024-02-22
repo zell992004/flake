@@ -13,9 +13,6 @@
     options.modules.packages = { enable = mkEnableOption "packages"; };
     config = mkIf cfg.enable {
         home.packages = with pkgs; [
-      # programming
-      nix-prefetch-github
-      rnix-lsp
       # others
       openssl
       libnotify
@@ -38,8 +35,13 @@
       bore-cli
       discord
       eza
-      libcxxStdenv
       obsidian
+      #programming
+      nix-prefetch-github
+      rnix-lsp
+      #Tmux things stdin/write to file
+      moreutils
+      libcxxStdenv
 # security
     x11_ssh_askpass
     #  sops
