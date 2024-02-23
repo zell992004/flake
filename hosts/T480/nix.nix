@@ -4,7 +4,7 @@ boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 #  boot.initrd.kernelModules = [ "intel" ];
   networking = {
-    hostName = "P72";
+      hostName = "T480";
     networkmanager.enable = true;
     firewall.enable = false;
   };
