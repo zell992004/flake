@@ -32,7 +32,7 @@ T480 = nixpkgs.lib.nixosSystem {
     ++ [(nixos-hardware.nixosModules.lenovo-thinkpad-t480)]
   ;
   };
-
+} 
 #wsl = nixpkgs.lib.nixosSystem {
 #    specialArgs = { inherit self inputs; };
 #    modules = 
@@ -41,4 +41,4 @@ T480 = nixpkgs.lib.nixosSystem {
 #      ;
 #  };
   
-}
+
