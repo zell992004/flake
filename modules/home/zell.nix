@@ -1,6 +1,7 @@
 { inputs, config, lib, pkgs, ... }: {
   imports =
        [ (import ./waybar) ]
+    ++ [ ( inputs.nixvim.homeManagerModules.nixvim)]
     ++ [ (import ./firefox) ]
     ++ [ (import ./codium) ]
     ++ [ (import ./hyprland) ]

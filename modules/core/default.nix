@@ -11,7 +11,7 @@ P72 = nixpkgs.lib.nixosSystem {
     specialArgs = { inherit self inputs; };
     modules =
     [ (../../hosts/P72/default.nix ) ]
- ++ [ (nixos-hardware.nixosModules.lenovo-thinkpad-p52)]
+      ++ [ (nixos-hardware.nixosModules.lenovo-thinkpad-p52)]
 # ++ [ (sops-nix.nixosModules.sops-nix)]
 
     ;
@@ -21,7 +21,6 @@ G14 = nixpkgs.lib.nixosSystem {
     specialArgs = {inherit self inputs;};
     modules =
     [ (../../hosts/G14/default.nix)]
-     ++ [ ( inputs.nixvim.nixosModules.nixvim)]
   #  ++ [(nixos-hardware.nixosModules.asus-zephyrus-ga401)]
    ;
   };
