@@ -27,7 +27,7 @@
       playerctl
       qalculate-gtk
       bleachbit
-      imv
+     # imv
       htop
       nvtop
       xdg-utils

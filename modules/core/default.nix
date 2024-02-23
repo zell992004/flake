@@ -12,6 +12,7 @@ P72 = nixpkgs.lib.nixosSystem {
     modules =
     [ (../../hosts/P72/default.nix ) ]
       ++ [ (nixos-hardware.nixosModules.lenovo-thinkpad-p52)]
+      ++ [ (inputs.nixvim.nixosModules.nixvim)]
 # ++ [ (sops-nix.nixosModules.sops-nix)]
 
     ;
