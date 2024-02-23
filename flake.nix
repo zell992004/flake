@@ -17,6 +17,10 @@
         url = "github:nix-community/NixOS-WSL";
         inputs.nixpkgs.follows = "nixpkgs";
       };
+    nixvim = {
+        url = "github.com:nix-community/nixvim";
+        inputs.nixpkgs.follows = "nixpkgs";
+      }
     };
   
 

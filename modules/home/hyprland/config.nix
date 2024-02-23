@@ -128,10 +128,10 @@ config = mkIf cfg.enable {
       bind = $mainMod, up, movefocus, u
       bind = $mainMod, down, movefocus, d
       # switch workspace
-      bind = $mainMod, 1, workspace, Terminal
-      bind = $mainMod, 2, workspace, Web
-      bind = $mainMod, 3, workspace, SSH
-      bind = $mainMod, 4, workspace, Notes
+      bind = $mainMod, 1, workspace, 1
+      bind = $mainMod, 2, workspace, 2 
+      bind = $mainMod, 3, workspace, 3
+      bind = $mainMod, 4, workspace, 4
       bind = $mainMod, 5, workspace, 5
       bind = $mainMod, 6, workspace, 6
       bind = $mainMod, 7, workspace, 7
