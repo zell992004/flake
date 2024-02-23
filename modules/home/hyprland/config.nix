@@ -10,10 +10,6 @@ config = mkIf cfg.enable {
   wayland.windowManager.hyprland = {
     extraConfig = "
       $mainMod = SUPER
-     # monitor = ,highrr,auto,1
-     # monitor = ,highres,auto,1
-
-     
       #TODO Add swipe gesture for workspaces
 
       input {
@@ -100,8 +96,8 @@ config = mkIf cfg.enable {
 
       # ----------------------------------------------------------------
       # keybindings
-      bind = $mainMod, Return, exec, foot
-      bind = $mainMod SHIFT, Return, exec, foot --fullscreen
+      bind = $mainMod, Return, exec, foot -e tmux
+      bind = $mainMod SHIFT, Return, exec, foot -e tmux --fullscreen
       bind = $mainMod, Q, killactive,
       bind = $mainMod, T, killactive,
       bind = $mainMod SHIFT, F, fullscreen,
@@ -133,7 +129,7 @@ config = mkIf cfg.enable {
       bind = $mainMod, down, movefocus, d
       # switch workspace
       bind = $mainMod, 1, workspace, 1
-      bind = $mainMod, 2, workspace, 2
+      bind = $mainMod, 2, workspace, 2 
       bind = $mainMod, 3, workspace, 3
       bind = $mainMod, 4, workspace, 4
       bind = $mainMod, 5, workspace, 5

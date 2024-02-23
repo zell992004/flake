@@ -16,10 +16,13 @@
     ++ [ (import ./tmux)]
     ++ [ (import ./gtk)]
     ++ [ (import ./scripts)]
-    ++ [ (import ./lazyvim)]
+    ++ [ (import ./nixvim)]
+ #   ++ [ (import ./lazyvim)]
+   
     ;
     config.modules = {
-        lazyvim.enable = true;
+        nixvim.enable =true;
+ #       lazyvim.enable = true;
         tmux.enable = true;
         waybar.enable = true;
         waybarsetting.enable = true;
