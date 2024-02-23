@@ -26,7 +26,11 @@ in {
 
     plugins = with pkgs.vimPlugins; [
       lazy-nvim
-      obsidian-nvim
+      {
+       plugin = obsidian-nvim;
+       type = "lua";
+       config = builtins.readFile (./lua/plugins/obsidian.lua);
+      }
     ];
     extraLuaConfig = 
       let
@@ -85,6 +89,7 @@ in {
           { name = "mini.indentscope"; path = mini-nvim; }
           { name = "mini.pairs"; path = mini-nvim; }
           { name = "mini.surround"; path = mini-nvim; }
+          { name = "Obsidian"; path = obsidian-nvim; }
         ];
         mkEntryFromDrv = drv:
           if lib.isDerivation drv then
