@@ -2,6 +2,7 @@
   config,
   pkgs,
   lib,
+  helpers,
   ...
 }:
 with lib;
@@ -11,14 +12,10 @@ in {
   options.modules.nixvim = { enable = mkEnableOption "nixvim";};
   config = mkIf cfg.enable {
 
-  programs.lazygit.enable = true;
+ # programs.lazygit.enable = true;
 
-  programs.nixvim = {
-    enable = true;
-    colorschemes.gruvbox.enable = true;
-    plugins = {
-        lightline.enable = true
-      };
+    programs.nixvim = {
+      enable = true;
     };
   };
 }

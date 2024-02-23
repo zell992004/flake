@@ -21,6 +21,7 @@ G14 = nixpkgs.lib.nixosSystem {
     specialArgs = {inherit self inputs;};
     modules =
     [ (../../hosts/G14/default.nix)]
+     ++ [ ( inputs.nixvim.nixosModules.nixvim)]
   #  ++ [(nixos-hardware.nixosModules.asus-zephyrus-ga401)]
    ;
   };

@@ -18,10 +18,10 @@
     ++ [ (import ./scripts)]
     ++ [ (import ./nixvim)]
  #   ++ [ (import ./lazyvim)]
-    ++ [ ( <nixvim>.homeManagerModules.nixvim)]
+   
     ;
     config.modules = {
-        nivim.enable =true;
+        nixvim.enable =true;
  #       lazyvim.enable = true;
         tmux.enable = true;
         waybar.enable = true;
