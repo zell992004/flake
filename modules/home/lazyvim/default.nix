@@ -27,9 +27,8 @@ in {
     plugins = with pkgs.vimPlugins; [
       lazy-nvim
       obsidian-nvim
-      ];
-
-    extraLuaConfig =
+    ];
+    extraLuaConfig = 
       let
         plugins = with pkgs.vimPlugins; [
           # LazyVim
@@ -71,7 +70,6 @@ in {
           plenary-nvim
           telescope-fzf-native-nvim
           telescope-nvim
-          obsidian-nvim
           todo-comments-nvim
           tokyonight-nvim
           trouble-nvim
@@ -79,7 +77,7 @@ in {
           vim-startuptime
           which-key-nvim
           vim-tmux-navigator
-          { name = "LuaSnip"; path = luasnip; }
+	        { name = "LuaSnip"; path = luasnip; }
           { name = "catppuccin"; path = catppuccin-nvim; }
           { name = "mini.ai"; path = mini-nvim; }
           { name = "mini.bufremove"; path = mini-nvim; }
@@ -116,14 +114,14 @@ in {
             { "williamboman/mason-lspconfig.nvim", enabled = false },
             { "williamboman/mason.nvim", enabled = false },
             -- import/override with your plugins
-            { import = "plugins" },
+	          {import = "plugins"},
             -- treesitter handled by xdg.configFile."nvim/parser", put this line at the end of spec to clear ensure_installed
             { "nvim-treesitter/nvim-treesitter", opts = { ensure_installed = {} } },
           },
         })
       '';
   };
-
+  
   # https://github.com/nvim-treesitter/nvim-treesitter#i-get-query-error-invalid-node-type-at-position
   xdg.configFile."nvim/parser".source =
     let
@@ -151,6 +149,9 @@ in {
     "${parsers}/parser";
 
   # Normal LazyVim config here, see https://github.com/LazyVim/starter/tree/main/lua
-  xdg.configFile."nvim/lua".source = ./lua;
+  xdg.configFile = {
+    "nvim/lua".source = ./lua;
+
+    };
 };
 }
