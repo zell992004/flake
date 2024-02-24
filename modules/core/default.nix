@@ -14,7 +14,13 @@ P72 = nixpkgs.lib.nixosSystem {
       ++ [ (nixos-hardware.nixosModules.lenovo-thinkpad-p52)]
       ++ [ (inputs.nixvim.nixosModules.nixvim)]
 # ++ [ (sops-nix.nixosModules.sops-nix)]
+    ;
+  };
 
+testserver = nixpkgs.lib.nixosSystem {
+    specialArgs = { inherit self inputs; };
+    modules = 
+    [ (../../hosts/testserver/default.nix)]
     ;
   };
 
