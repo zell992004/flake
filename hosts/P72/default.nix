@@ -11,6 +11,7 @@
        ./../../modules/core/user.nix
        ./../../modules/core/wayland.nix
        ./../../modules/core/obsidian.nix
+       ./../../modules/core/steam.nix
        ./homemanager.nix
     ];
 }

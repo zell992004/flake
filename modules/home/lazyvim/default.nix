@@ -26,11 +26,8 @@ in {
 
     plugins = with pkgs.vimPlugins; [
       lazy-nvim
-      {
-       plugin = obsidian-nvim;
-       type = "lua";
-       config = builtins.readFile (./lua/plugins/obsidian.lua);
-      }
+      obsidian-nvim
+      
     ];
     extraLuaConfig = 
       let
@@ -89,7 +86,7 @@ in {
           { name = "mini.indentscope"; path = mini-nvim; }
           { name = "mini.pairs"; path = mini-nvim; }
           { name = "mini.surround"; path = mini-nvim; }
-          { name = "Obsidian"; path = obsidian-nvim; }
+          { name = "obsidian"; path = obsidian-nvim; }
         ];
         mkEntryFromDrv = drv:
           if lib.isDerivation drv then
@@ -98,7 +95,7 @@ in {
             drv;
         lazyPath = pkgs.linkFarm "lazy-plugins" (builtins.map mkEntryFromDrv plugins);
       in
-      ''
+    ''
         require("lazy").setup({
           defaults = {
             lazy = true,
@@ -119,14 +116,13 @@ in {
             { "williamboman/mason-lspconfig.nvim", enabled = false },
             { "williamboman/mason.nvim", enabled = false },
             -- import/override with your plugins
-	          {import = "plugins"},
+            { import = "plugins" },
             -- treesitter handled by xdg.configFile."nvim/parser", put this line at the end of spec to clear ensure_installed
             { "nvim-treesitter/nvim-treesitter", opts = { ensure_installed = {} } },
           },
         })
       '';
-  };
-  
+  };  
   # https://github.com/nvim-treesitter/nvim-treesitter#i-get-query-error-invalid-node-type-at-position
   xdg.configFile."nvim/parser".source =
     let
