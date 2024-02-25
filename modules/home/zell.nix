@@ -17,12 +17,12 @@
     ++ [ (import ./tmux)]
     ++ [ (import ./gtk)]
     ++ [ (import ./scripts)]
- #   ++ [ (import ./nixvim)]
     ++ [ (import ./lazyvim)]
+    ++ [ (import ./ncspot/)]
    
     ;
     config.modules = {
- #       nixvim.enable = true;
+        ncspot.enable = true;
         lazyvim.enable = true;
         tmux.enable = true;
         waybar.enable = true;

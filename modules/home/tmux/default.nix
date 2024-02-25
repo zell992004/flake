@@ -22,6 +22,8 @@ programs.tmux ={
   set -g @resurrect-hook-post-save-all 'target=$(readlink -f $resurrect_dir/last); sed "s| --cmd .*-vim-pack-dir||g; s|/etc/profiles/per-user/$USER/bin/||g; s|/home/$USER/.nix-profile/bin/||g" $target | sponge $target'
   set -g @continuum-boot 'on'
   set -g @continuum-boot-options 'foot'
+  set -g default-terminal 'tmux-256color'
+  set -as terminal-overrides ",foot*:Tc"
   '';
 };
 };
