@@ -17,18 +17,17 @@ P72 = nixpkgs.lib.nixosSystem {
     ;
   };
 
-testserver = nixpkgs.lib.nixosSystem {
-    specialArgs = { inherit self inputs; };
-    modules = 
-    [ (../../hosts/testserver/default.nix)]
-    ;
-  };
+#testserver = nixpkgs.lib.nixosSystem {
+#    specialArgs = { inherit self inputs; };
+#    modules = 
+#    [ (../../hosts/testserver/default.nix)]
+#    ;
+#  };
 
 G14 = nixpkgs.lib.nixosSystem {
     specialArgs = {inherit self inputs;};
     modules =
     [ (../../hosts/G14/default.nix)]
-  #  ++ [(nixos-hardware.nixosModules.asus-zephyrus-ga401)]
    ;
   };
 

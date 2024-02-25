@@ -86,7 +86,6 @@ in {
           { name = "mini.indentscope"; path = mini-nvim; }
           { name = "mini.pairs"; path = mini-nvim; }
           { name = "mini.surround"; path = mini-nvim; }
-          { name = "obsidian"; path = obsidian-nvim; }
         ];
         mkEntryFromDrv = drv:
           if lib.isDerivation drv then
@@ -119,6 +118,7 @@ in {
             { import = "plugins" },
             -- treesitter handled by xdg.configFile."nvim/parser", put this line at the end of spec to clear ensure_installed
             { "nvim-treesitter/nvim-treesitter", opts = { ensure_installed = {} } },
+            {import = "obsidian.lua"}
           },
         })
       '';
@@ -152,7 +152,7 @@ in {
   # Normal LazyVim config here, see https://github.com/LazyVim/starter/tree/main/lua
   xdg.configFile = {
     "nvim/lua".source = ./lua;
-
+    "nvim/lua/plugins/".source = ./lua/plugins;
     };
 };
 }
