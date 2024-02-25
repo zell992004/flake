@@ -430,6 +430,22 @@
         "type": "github"
       }
     },
+    "obsidian-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1708876805,
+        "narHash": "sha256-mTZSoynJOdhs/VyB+wKrtuWaBY7RYQCWHZgsEzmhs+8=",
+        "owner": "epwalsh",
+        "repo": "obsidian.nvim",
+        "rev": "9ede6c86b1f47afe00442a6e84fa1f5b00153742",
+        "type": "github"
+      },
+      "original": {
+        "owner": "epwalsh",
+        "repo": "obsidian.nvim",
+        "type": "github"
+      }
+    },
     "pre-commit-hooks": {
       "inputs": {
         "flake-compat": "flake-compat_3",
@@ -466,7 +482,8 @@
         "nix-gaming": "nix-gaming",
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs_2",
-        "nixvim": "nixvim"
+        "nixvim": "nixvim",
+        "obsidian-nvim": "obsidian-nvim"
       }
     },
     "systems": {

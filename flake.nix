@@ -21,6 +21,7 @@
         url = "github:nix-community/nixvim";
         inputs.nixpkgs.follows = "nixpkgs";
       };
+      obsidian-nvim = { url = "github:epwalsh/obsidian.nvim"; flake = false; };
     };
   
 
