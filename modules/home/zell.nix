@@ -18,7 +18,7 @@
     ++ [ (import ./gtk)]
     ++ [ (import ./scripts)]
     ++ [ (import ./lazyvim)]
-    ++ [ (import ./ncspot/)]
+    ++ [ (import ./ncspot)]
    
     ;
     config.modules = {

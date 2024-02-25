@@ -11,8 +11,7 @@ in{
       settings = {
         shuffle = true;
       gapless = true;
-        }
-
-    } 
+        };
+    };
 };
 }
