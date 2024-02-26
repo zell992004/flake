@@ -20,7 +20,7 @@ P72 = nixpkgs.lib.nixosSystem {
 mserver = nixpkgs.lib.nixosSystem {
     specialArgs = { inherit self inputs; };
     modules = 
-    [ (../../hosts/mserver//default.nix)]
+    [ (../../hosts/mserver/default.nix)]
     ;
   };
 
