@@ -35,6 +35,7 @@ in {
       nrs = "sudo nixos-rebuild switch --flake ~/flake/.#";
       fl = "cd ~/flake/ && v";
       notes = "cd ~/Documents/BrainPalace && v";
+      music = "ncspot";
     };
   };
   };
