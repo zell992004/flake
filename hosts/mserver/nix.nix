@@ -11,7 +11,7 @@
     networkmanager.enable = true;
     firewall.enable = false;
     };
-
+  programs.java = {enable = true; package = pkgs.jdk8; };
   services.xserver = {
     enable = true;
     xkb.layout = "us";
