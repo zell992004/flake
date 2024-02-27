@@ -1,6 +1,6 @@
 {pkgs, inputs, config, nixpkgs, self, ...}: {
 
-  boot.loader grub = {
+  boot.loader.grub = {
       enable = true;
       device = "/dev/sda";
       useOSProber = true;
@@ -20,5 +20,6 @@
       enable = true;
       user = "zell";
     }; 
-
+  };
+}
   
