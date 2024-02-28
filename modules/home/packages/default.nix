@@ -14,7 +14,6 @@
     config = mkIf cfg.enable {
         home.packages = with pkgs; [
       # others
-      unzip
       neofetch
       openssl
       libnotify

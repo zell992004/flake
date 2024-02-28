@@ -19,6 +19,7 @@ programs.tmux ={
   set-option -g mouse on
   set -g default-terminal 'tmux-256color'
   set -as terminal-overrides ",foot*:Tc"
+  set -g @resurrect-strategy-vim 'session'
   set -g @resurrect-strategy-nvim 'session'
   set -g @resurrect-capture-pane-contents 'on'
   set -g @continuum-restore 'on'
