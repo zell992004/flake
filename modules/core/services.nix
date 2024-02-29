@@ -11,5 +11,9 @@
       };
     };
     self-deploy.sshKeyFile = "~/.ssh/id_ed25519";
+    ollama = {
+      enable = true;
+    #  acceleration = "cuda"; find why over ride package
+    };
   };
 }
