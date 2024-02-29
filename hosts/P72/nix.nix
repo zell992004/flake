@@ -30,7 +30,6 @@ services.hardware.bolt.enable = true;
     powerManagement.enable = false;
     open = false;
     nvidiaSettings = true;
-  #  package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
   hardware.opengl = {
     enable = true;
