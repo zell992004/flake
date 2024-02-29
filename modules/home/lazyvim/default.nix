@@ -16,6 +16,7 @@ in {
   programs.neovim = {
     enable = true;
     defaultEditor = true;
+    withRuby = true;
     extraPackages = with pkgs; [
       # LazyVim
       lua-language-server
@@ -77,7 +78,6 @@ in {
           vim-illuminate
           vim-startuptime
           which-key-nvim
-          vim-tmux-navigator
 	        { name = "LuaSnip"; path = luasnip; }
           { name = "catppuccin"; path = catppuccin-nvim; }
           { name = "mini.ai"; path = mini-nvim; }
