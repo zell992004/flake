@@ -3,7 +3,7 @@
 with lib;
 let
   defaultUser = nixos;
-  system = "x86_64-linux";
+  nixpkgs.system = "x86_64-linux";
 in
 {
   imports = [
